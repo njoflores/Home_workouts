@@ -1,0 +1,113 @@
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  background-position: center;
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+/* Sidebar Styles */
+.sidebar {
+  width: 60px;
+  height: 100vh;
+  background-color: #44925f;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+  width: 250px; /* Expand when hovered */
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #2aac6f;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.sidebar-nav li {
+  width: 100%;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+.sidebar-nav a i {
+  margin-right: 10px; /* Space between icon and text */
+  transition: margin-right 0.3s ease;
+}
+
+.sidebar-nav a span {
+  display: inline-block;
+  opacity: 0; /* Hide text initially */
+  transition: opacity 0.3s ease;
+}
+
+.sidebar:hover a span {
+  opacity: 1; /* Show text when sidebar is expanded */
+}
+
+.sidebar-nav a:hover {
+  background-color: #1abc9c;
+}
+
+/* Content Styles */
+.content {
+  margin-left: 60px; /* Offset for initial sidebar width */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  color: white;
+  background-color:#44925f;
+}
+
+.sidebar:hover ~ .content {
+  margin-left: 250px; /* Adjust content margin when sidebar expands */
+}
+footer {
+    text-align: center;  /* Center the footer content */
+    padding: 20px;  /* Add some padding */
+    background-color: #44925f;  /* Dark background color */
+    color: white;  /* White text color */
+    position: fixed;  /* Fix the footer at the bottom */
+    bottom: 0;
+    width: 100%;  /* Full width */
+}
+
+footer a {
+    color:  #1abc9c;  /* Change the email link color */
+    text-decoration: none;  /* Remove underline from the link */
+}
+
+footer a:hover {
+    text-decoration: underline;  /* Underline the link when hovered */
+}

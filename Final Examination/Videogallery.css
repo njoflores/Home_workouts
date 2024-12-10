@@ -1,0 +1,17 @@
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  background-position: center;
+}
+h1{
+	color: white;
+	text-align: center;
+}
+ .video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(560px, 1fr)); /* Adjust video size based on the screen width */
+  gap: 20px;  /* Adds space between the videos */
+  justify-content: center;  /* Center the grid on the page */
+  padding: 20px;
+}
