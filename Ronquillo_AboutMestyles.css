@@ -1,0 +1,68 @@
+/*For the image alignments*/
+img{
+	display: block;
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+/*Table Styles*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ffe6ff;
+}
+
+/*Table link styles/
+a:link{
+	color:blue;
+}
+a:hover{
+	color:#e6fff7;
+}
+
+/*Color, font, and font weight styles*/
+ul{
+	color:#660000; 
+}
+
+li{
+	color: red;
+	font-family:Courier New;
+	font-weight:bold;
+}
+
+p{
+	color:#660000;
+}
+
+h1{
+	color:#800060;
+	font-family: Papyrus;
+}
+
+h5{
+	color:red; 
+}
+
+h4{
+	color:#b300b3;
+	font-family: Papyrus;
+}
+
+th{
+	color:#660000;
+}
+
+blockquote{
+	color:#660000;
+}
+

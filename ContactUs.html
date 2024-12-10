@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="ContactUs.css">
+</head>
+<body>
+<body background="C:\Users\mika\Documents\2nd year\IIT406- Computer Programming\Final Examination\pictures\background-contact-login.jpg">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form id="contact-form" onsubmit="return validateForm()">
+            <div>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div>
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="comment">Comment</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+            <p id="error-message" style="color:red;"></p>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById("first-name").value;
+            const lastName = document.getElementById("last-name").value;
+            const email = document.getElementById("email").value;
+            const comment = document.getElementById("comment").value;
+            const errorMessage = document.getElementById("error-message");
+
+            // Validate that no fields are empty
+            if (firstName === "" || lastName === "" || email === "" || comment === "") {
+                errorMessage.textContent = "Please fill in all fields.";
+                return false;  // Prevent form submission if validation fails
+            }
+
+            // Validate email format
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                errorMessage.textContent = "Please enter a valid email address.";
+                return false;  // Prevent form submission if validation fails
+            }
+
+            // If validation passes, redirect to the "Aboutme.html" page
+            setTimeout(function() {
+                window.location.href = "Aboutme.html"; // Redirect after a brief delay
+            }, 500);  // 500 ms delay to ensure the validation message is processed
+
+            return false;  // Prevent the default form submission to ensure redirect
+        }
+    </script>
+</body>
+</html>
